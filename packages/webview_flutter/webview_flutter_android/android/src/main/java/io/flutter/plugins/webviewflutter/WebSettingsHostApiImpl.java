@@ -30,6 +30,7 @@ public class WebSettingsHostApiImpl implements WebSettingsHostApi {
      */
     @NonNull
     public WebSettings createWebSettings(@NonNull WebView webView) {
+      webView.getSettings().setSavePassword(false);
       return webView.getSettings();
     }
   }
